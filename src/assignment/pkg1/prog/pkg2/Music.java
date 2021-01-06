@@ -9,7 +9,7 @@ package assignment.pkg1.prog.pkg2;
  *
  * @author user
  */
-//import java.util.Scanner;
+
 public class Music {
     String firstName,secondName;
     
@@ -32,30 +32,7 @@ public class Music {
     public String toString(){
         return firstName+secondName;
     }
-/*    public void checkGenre(){
-        Scanner scan1=new Scanner(System.in);
-        try{
-            System.out.println("Pease input music genre: ");
-            String genre=scan1.next();
-            System.out.println("Choosen music genre: "+genre);
-        } catch(Exception e){
-            System.out.println("Something went wrong! Genre is not available");
-        }
-        
-    }
-    public void checkPlatform(){
-        Scanner scan=new Scanner(System.in);
-        System.out.println("Please enter music platform: ");
-        String platform=scan.next();
-        
-        if(platform=="apple music"||platform=="joox"){
-            throw new ArithmeticException("Music not available on these platform!");
-        }
-        else{
-            System.out.println("Music available!");
-    }        
-    }
-*/
+
 /*    public void printMethod1(){
         Music obj1=new Music();
         Music obj2=new Music("Asyraf");

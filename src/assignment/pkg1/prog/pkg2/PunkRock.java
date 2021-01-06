@@ -5,11 +5,13 @@
  */
 package assignment.pkg1.prog.pkg2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author user
  */
-public class PunkRock {
+public class PunkRock{
     String songTitle,artist,album;
     double price;
     private String dateReleased;
@@ -18,9 +20,6 @@ public class PunkRock {
         this.songTitle="I wanna be sedated";
         this.artist="Ramones";
         this.album="The Greatest Hits";
-    }
-    PunkRock(double p){
-        
     }
     public void printSong(){
         PunkRock obj1=new PunkRock();
@@ -45,5 +44,28 @@ public class PunkRock {
     }
     public double getPrice(){
         return price;
+    }
+    public void checkGenre(){
+        Scanner scan1=new Scanner(System.in);
+        try{
+            System.out.println("Pease input music genre: ");
+            String genre=scan1.next();
+            System.out.println("Choosen music genre: "+genre);
+        } catch(Exception e){
+            System.out.println("Something went wrong! Genre is not available");
+        }
+        
+    }
+    public void checkPlatform(){
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Please enter music platform: ");
+        String platform=scan.next();
+        
+        if(platform=="apple music"||platform=="joox"){
+            throw new ArithmeticException("Music not available on these platform!");
+        }
+        else{
+            System.out.println("Music available!");
+    }
     }
 }
